@@ -3,233 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda | 4 DEDOS FRITOS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>4 Dedos Fritos - Tienda 3D</title>
     <style>
-        :root {
-            --red: #c41212;
-            --black: #000000;
-            --dark-gray: #1a1a1a;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            background-color: var(--black);
-            color: var(--white);
-            overflow-x: hidden;
-            padding-top: 60px; /* Espacio para el carrito fijo */
-        }
-
-        /* CARRITO FIJO SUPERIOR */
-        .cart-navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--dark-gray);
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            z-index: 2000;
-            border-bottom: 2px solid var(--red);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-
-        .cart-info { font-weight: 700; font-size: 0.9rem; }
-        .btn-checkout {
-            background: #25d366;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-weight: 900;
-            cursor: pointer;
-        }
-
-        /* BANNER */
-        .header-banner {
-            background-color: var(--red);
-            width: 100%;
-            padding: 50px 0;
-            text-align: center;
-            border-bottom: 5px solid var(--white);
-        }
-
-        .logo-banner { max-width: 180px; height: auto; }
-        .slogan-text { margin-top: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; }
-
-        .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
-        .section-title { text-align: center; margin: 40px 0; font-size: 2rem; font-weight: 900; color: var(--red); text-transform: uppercase; }
-
-        /* CATALOGO */
-        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
-        .product-card { background: var(--dark-gray); border-radius: 20px; overflow: hidden; border: 1px solid #333; text-align: center; }
-        .product-img { width: 100%; height: 280px; object-fit: cover; }
-        .product-info { padding: 20px; }
-        .product-info h3 { font-size: 1.1rem; margin-bottom: 10px; }
-
-        .btn-add {
-            background: var(--white);
-            color: var(--black);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 900;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: 0.3s;
-        }
-        .btn-add:hover { background: var(--red); color: white; }
-
-        /* CALCULADORA */
-        .calc-wrapper { background: var(--red); padding: 40px; border-radius: 30px; margin: 60px 0; }
-        .calc-input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: none; font-size: 1.1rem; box-sizing: border-box; }
-        .final-price-box { background: var(--white); color: var(--black); padding: 20px; border-radius: 15px; text-align: center; margin-top: 20px; }
-
-        footer { text-align: center; padding: 40px; opacity: 0.4; }
+        body { font-family: Arial, sans-serif; background: #1a1a1a; color: white; text-align: center; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        .producto { background: #333; padding: 15px; border-radius: 15px; margin-bottom: 20px; border: 2px solid #ff4500; }
+        img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+        input, select { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { background: #25d366; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 16px; width: 100%; }
+        button:hover { background: #128c7e; }
+        h2 { color: #ff4500; }
+        .info-pago { font-size: 12px; color: #aaa; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-<nav class="cart-navbar">
-    <div class="cart-info">🛒 <span id="cart-count">0</span> productos | Total: <span id="cart-total">$0.00</span></div>
-    <button class="btn-checkout" onclick="enviarWhatsApp()">COMPRAR AHORA</button>
-</nav>
-
-<section class="header-banner">
-    <img src="4d2fritos.png" alt="Logo" class="logo-banner">
-    <p class="slogan-text">SUBLIMAMOS TUS IDEAS, PERSONALIZAMOS TUS SUEÑOS</p>
-</section>
-
 <div class="container">
-    <h2 class="section-title">Catálogo de Productos</h2>
+    <h1>🔥 4 Dedos Fritos 🔥</h1>
+    <p>Impresión 3D de alta calidad en Tepic</p>
 
-    <div class="catalog-grid">
-        <div class="product-card">
-            <img src="telefonosfake.jpeg" class="product-img">
-            <div class="product-info">
-                <h3>Celular Fake</h3>
-                <div style="font-weight:900; color:var(--red);">$30.00 MXN</div>
-                <button class="btn-add" onclick="agregarAlCarrito('Celular Fake', 30)">Añadir al Carrito</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="lentes gato.jpeg" class="product-img">
-            <div class="product-info">
-                <h3>Gafas para Gato</h3>
-                <div style="font-weight:900; color:var(--red);">$15.00 MXN</div>
-                <button class="btn-add" onclick="agregarAlCarrito('Gafas para Gato', 15)">Añadir al Carrito</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="brazos gato.jpeg" class="product-img">
-            <div class="product-info">
-                <h3>Brazos Gato Gym</h3>
-                <div style="font-weight:900; color:var(--red);">$30.00 MXN</div>
-                <button class="btn-add" onclick="agregarAlCarrito('Brazos Gato', 30)">Añadir al Carrito</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="dragon1.jpeg" class="product-img">
-            <div class="product-info">
-                <h3>Dragón Bronce</h3>
-                <div style="font-weight:900; color:var(--red);">$50.00 MXN</div>
-                <button class="btn-add" onclick="agregarAlCarrito('Dragon Bronce', 50)">Añadir al Carrito</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="dragon2.jpeg" class="product-img">
-            <div class="product-info">
-                <h3>Dragón Verde</h3>
-                <div style="font-weight:900; color:var(--red);">$70.00 MXN</div>
-                <button class="btn-add" onclick="agregarAlCarrito('Dragon Verde', 70)">Añadir al Carrito</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="palanca de cambios.jpeg" class="product-img">
-            <div class="product-info">
-                <h3>Llavero Palanca</h3>
-                <div style="font-weight:900; color:var(--red);">$30.00 MXN</div>
-                <button class="btn-add" onclick="agregarAlCarrito('Llavero Palanca', 30)">Añadir al Carrito</button>
-            </div>
-        </div>
+    <div class="producto">
+        <img src="brazos_gato.jpeg" alt="Brazos Gato">
+        <h3>Brazos de Hulk para Gato</h3>
+        <p>Precio: $150 MXN</p>
+        <button onclick="comprarFijo('Brazos de Gato', 150)">Comprar Ahora</button>
     </div>
 
-    <div class="calc-wrapper">
-        <h2 style="text-align: center;">Personalizados (Calculadora)</h2>
-        <label>Gramos:</label>
-        <input type="number" id="gr" class="calc-input" placeholder="0" oninput="calcular()">
-        <label>Horas:</label>
-        <input type="number" id="hr" class="calc-input" placeholder="0" oninput="calcular()">
-        <div class="final-price-box">
-            <div id="res-personalizado" style="font-size: 1.5rem; font-weight: 900; color: var(--red);">$0.00</div>
-            <button class="btn-add" onclick="agregarPersonalizado()">Añadir Cotización</button>
-        </div>
+    <div class="producto">
+        <img src="litofania_v2.jpeg" alt="Litofanía">
+        <h2>✨ Sección de Litofanías</h2>
+        <p>Convierte tu foto favorita en una pieza de arte 3D.</p>
+        
+        <label>Nombre del Cliente:</label>
+        <input type="text" id="nombreLitofania" placeholder="Tu nombre completo">
+        
+        <label>Tamaño de la Litofanía:</label>
+        <select id="tamanoLitofania">
+            <option value="Pequeña (10cm) - $200">Pequeña (10cm) - $200</option>
+            <option value="Mediana (15cm) - $350">Mediana (15cm) - $350</option>
+            <option value="Grande (20cm) - $500">Grande (20cm) - $500</option>
+        </select>
+
+        <p><strong>Nota:</strong> Al presionar el botón, se abrirá WhatsApp. Por ahí me envías la <b>foto</b> que quieres imprimir.</p>
+        <button onclick="pedirLitofania()">Encargar Litofanía</button>
+    </div>
+
+    <div class="producto" style="border-color: #008cff;">
+        <h2>🛠️ Cotizar tu propio STL</h2>
+        <p>¿Tienes un archivo de Cults3D o Thingiverse?</p>
+        
+        <input type="text" id="nombreSTL" placeholder="Tu nombre">
+        <p class="info-pago">Instrucciones: Dale al botón y en WhatsApp selecciona "Adjuntar Documento" para enviarme tu archivo .STL</p>
+        <button style="background: #008cff;" onclick="pedirSTL()">Enviar mi archivo STL</button>
     </div>
 </div>
 
-<footer>4 DEDOS FRITOS - TEPIC, NAYARIT</footer>
-
 <script>
-    let carrito = [];
-    let total = 0;
+    const miTelefono = "52311XXXXXXX"; // REEMPLAZA CON TU NÚMERO (Sin espacios)
 
-    function agregarAlCarrito(nombre, precio) {
-        carrito.push({nombre, precio});
-        actualizarInterfaz();
+    function comprarFijo(producto, precio) {
+        let msg = `¡Hola! Me interesa comprar: ${producto} ($${precio} MXN).`;
+        window.open(`https://wa.me/${miTelefono}?text=${encodeURIComponent(msg)}`);
     }
 
-    function calcular() {
-        let g = document.getElementById('gr').value || 0;
-        let h = document.getElementById('hr').value || 0;
-        let p = ((g * 0.5) + (h * 1)) * 1.7;
-        document.getElementById('res-personalizado').innerText = '$' + p.toFixed(2);
-        return p;
+    function pedirLitofania() {
+        let nombre = document.getElementById('nombreLitofania').value;
+        let tamano = document.getElementById('tamanoLitofania').value;
+
+        if(nombre == "") { alert("Por favor, pon tu nombre."); return; }
+
+        let msg = `Hola 4 Dedos Fritos! Soy ${nombre}. Quiero encargar una Litofanía tamaño ${tamano}. Aquí te envío la foto:`;
+        window.open(`https://wa.me/${miTelefono}?text=${encodeURIComponent(msg)}`);
     }
 
-    function agregarPersonalizado() {
-        let precio = calcular();
-        if(precio > 0) {
-            agregarAlCarrito("Pieza Personalizada 3D", precio);
-        }
-    }
+    function pedirSTL() {
+        let nombre = document.getElementById('nombreSTL').value;
+        if(nombre == "") { alert("Por favor, pon tu nombre."); return; }
 
-    function actualizarInterfaz() {
-        document.getElementById('cart-count').innerText = carrito.length;
-        total = carrito.reduce((sum, item) => sum + item.precio, 0);
-        document.getElementById('cart-total').innerText = '$' + total.toFixed(2);
-    }
-
-    function enviarWhatsApp() {
-        if(carrito.length === 0) {
-            alert("Tu carrito está vacío.");
-            return;
-        }
-
-        let mensaje = "¡Hola 4 Dedos Fritos! Quiero hacer el siguiente pedido:\n\n";
-        
-        // Agrupar productos repetidos
-        let resumen = {};
-        carrito.forEach(item => {
-            resumen[item.nombre] = (resumen[item.nombre] || 0) + 1;
-        });
-
-        for (let prod in resumen) {
-            mensaje += `- ${resumen[prod]}x ${prod}\n`;
-        }
-
-        mensaje += `\n*Total estimado: $${total.toFixed(2)}*`;
-        
-        let url = "https://wa.me/3111455163?text=" + encodeURIComponent(mensaje);
-        window.open(url, '_blank');
+        let msg = `¡Hola! Soy ${nombre}. Tengo un archivo STL que quiero cotizar. Te lo adjunto a continuación:`;
+        window.open(`https://wa.me/${miTelefono}?text=${encodeURIComponent(msg)}`);
     }
 </script>
 
