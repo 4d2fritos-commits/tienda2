@@ -1,0 +1,153 @@
+<svg width="680" height="548" viewBox="0 0 680 548" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Shadow (pulses subtly) -->
+  <ellipse cx="340" cy="522" rx="88" ry="13" fill="#1a1a1a" opacity="0.18">
+    <animate attributeName="rx" values="88;72;88" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+    <animate attributeName="opacity" values="0.18;0.08;0.18" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+  </ellipse>
+
+  <!-- ===== ENTIRE CHARACTER floats up/down ===== -->
+  <g id="character">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-8; 0,0" dur="3s" repeatCount="indefinite"
+      calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+
+    <!-- LEFT ARM + HAND: rotates at shoulder (289,381) -->
+    <g id="left-arm-group">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0,289,381; -22,289,381; 0,289,381; 14,289,381; 0,289,381"
+        dur="1.6s" begin="0s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"
+        keyTimes="0;0.25;0.5;0.75;1"/>
+      <rect x="216" y="372" width="73" height="18" rx="9" fill="#1a1a1a"/>
+      <rect x="191" y="364" width="28" height="34" rx="12" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <ellipse cx="199" cy="364" rx="5" ry="5.5" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <ellipse cx="207" cy="362" rx="5" ry="5.5" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <ellipse cx="215" cy="363" rx="5" ry="5.5" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+    </g>
+
+    <!-- RIGHT ARM + HAND + CUBE: rotates at shoulder (391,381) -->
+    <g id="right-arm-group">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0,391,381; 22,391,381; 0,391,381; -14,391,381; 0,391,381"
+        dur="1.6s" begin="0.8s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"
+        keyTimes="0;0.25;0.5;0.75;1"/>
+      <rect x="391" y="372" width="73" height="18" rx="9" fill="#1a1a1a"/>
+      <rect x="462" y="362" width="28" height="36" rx="12" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <rect x="467" y="368" width="13" height="13" rx="1.5" fill="#c41212"/>
+      <path d="M467 368 L472 363 L485 363 L480 368Z" fill="#9a0e0e"/>
+      <path d="M480 368 L485 363 L485 376 L480 381Z" fill="#700b0b"/>
+    </g>
+
+    <!-- BODY -->
+    <rect x="288" y="344" width="104" height="152" rx="22" fill="#1a1a1a"/>
+    <rect x="300" y="371" width="80" height="32" rx="9" fill="#c41212"/>
+    <rect x="308" y="380" width="9" height="9" rx="1" fill="white" opacity="0.85"/>
+    <path d="M308 380 L311 376 L317 376 L317 380Z" fill="white" opacity="0.65"/>
+    <text x="346" y="387" text-anchor="middle" dominant-baseline="central" fill="white" font-size="14" font-weight="bold" font-family="Montserrat,sans-serif">4DF</text>
+    <circle cx="302" cy="432" r="3.5" fill="#c41212" opacity="0.55"/>
+    <circle cx="378" cy="432" r="3.5" fill="#c41212" opacity="0.55"/>
+
+    <!-- NECK -->
+    <rect x="324" y="332" width="32" height="15" rx="7" fill="#1a1a1a"/>
+
+    <!-- ===== FINGERS (wave sequentially) ===== -->
+    <!-- F1: Index -->
+    <g id="f1">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-6; 0,0" dur="1.8s" begin="0s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+      <rect x="286" y="100" width="28" height="115" rx="14" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <rect x="286" y="100" width="28" height="34" rx="14" fill="#F4C430"/>
+      <line x1="289" y1="158" x2="311" y2="158" stroke="#E0C898" stroke-width="1" stroke-linecap="round"/>
+      <line x1="290" y1="172" x2="310" y2="172" stroke="#E0C898" stroke-width="0.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- F2: Middle + chef hat -->
+    <g id="f2">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-8; 0,0" dur="1.8s" begin="0.18s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+      <rect x="321" y="73" width="28" height="142" rx="14" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <rect x="321" y="73" width="28" height="34" rx="14" fill="#F4C430"/>
+      <line x1="324" y1="142" x2="346" y2="142" stroke="#E0C898" stroke-width="1" stroke-linecap="round"/>
+      <line x1="325" y1="156" x2="345" y2="156" stroke="#E0C898" stroke-width="0.8" stroke-linecap="round"/>
+      <rect x="320" y="42" width="30" height="23" rx="10" fill="white" stroke="#DDD8D0" stroke-width="0.5"/>
+      <rect x="311" y="63" width="48" height="11" rx="5" fill="white" stroke="#DDD8D0" stroke-width="0.5"/>
+      <text x="335" y="54" text-anchor="middle" dominant-baseline="central" fill="#c41212" font-size="12" font-weight="bold" font-family="Montserrat,sans-serif">4</text>
+    </g>
+
+    <!-- F3: Ring -->
+    <g id="f3">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-7; 0,0" dur="1.8s" begin="0.36s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+      <rect x="356" y="87" width="28" height="128" rx="14" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <rect x="356" y="87" width="28" height="34" rx="14" fill="#F4C430"/>
+      <line x1="359" y1="150" x2="381" y2="150" stroke="#E0C898" stroke-width="1" stroke-linecap="round"/>
+      <line x1="360" y1="164" x2="380" y2="164" stroke="#E0C898" stroke-width="0.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- F4: Pinky -->
+    <g id="f4">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-5; 0,0" dur="1.8s" begin="0.54s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+      <rect x="390" y="119" width="24" height="96" rx="12" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+      <rect x="390" y="119" width="24" height="29" rx="12" fill="#F4C430"/>
+      <line x1="393" y1="174" x2="411" y2="174" stroke="#E0C898" stroke-width="1" stroke-linecap="round"/>
+      <line x1="394" y1="186" x2="410" y2="186" stroke="#E0C898" stroke-width="0.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- HEAD -->
+    <rect x="268" y="208" width="144" height="128" rx="26" fill="#FDE8C8" stroke="#E8D5B7" stroke-width="0.5"/>
+    <rect x="282" y="215" width="118" height="28" rx="17" fill="white" opacity="0.22"/>
+    <circle cx="284" cy="298" r="13" fill="#F4A460" opacity="0.34"/>
+    <circle cx="396" cy="298" r="13" fill="#F4A460" opacity="0.34"/>
+    <rect x="268" y="254" width="14" height="9" rx="4" fill="#c41212"/>
+    <rect x="398" y="254" width="14" height="9" rx="4" fill="#c41212"/>
+    <rect x="328" y="254" width="24" height="9" rx="4" fill="#c41212"/>
+    <circle cx="308" cy="258" r="26" fill="#c41212"/>
+    <circle cx="308" cy="258" r="20" fill="#1a1a1a"/>
+    <circle cx="308" cy="258" r="15" fill="#1C2340"/>
+    <circle cx="316" cy="250" r="5.5" fill="white" opacity="0.9"/>
+    <circle cx="313" cy="247" r="2" fill="white" opacity="0.65"/>
+    <circle cx="372" cy="258" r="26" fill="#c41212"/>
+    <circle cx="372" cy="258" r="20" fill="#1a1a1a"/>
+    <circle cx="372" cy="258" r="15" fill="#1C2340"/>
+    <circle cx="380" cy="250" r="5.5" fill="white" opacity="0.9"/>
+    <circle cx="377" cy="247" r="2" fill="white" opacity="0.65"/>
+    <circle cx="340" cy="282" r="4.5" fill="#E8A480" opacity="0.72"/>
+    <path d="M320 300 Q340 318 360 300" fill="none" stroke="#c41212" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- LEFT FOOT: kicks/swings from top-center (316,494) -->
+    <g id="left-foot">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0,316,494; -25,316,494; 0,316,494; 12,316,494; 0,316,494"
+        dur="1.0s" begin="0s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"
+        keyTimes="0;0.25;0.5;0.75;1"/>
+      <rect x="298" y="494" width="36" height="20" rx="10" fill="#c41212"/>
+    </g>
+
+    <!-- RIGHT FOOT: opposite phase (364,494) -->
+    <g id="right-foot">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0,364,494; 25,364,494; 0,364,494; -12,364,494; 0,364,494"
+        dur="1.0s" begin="0.5s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"
+        keyTimes="0;0.25;0.5;0.75;1"/>
+      <rect x="346" y="494" width="36" height="20" rx="10" fill="#c41212"/>
+    </g>
+
+  </g><!-- end character -->
+
+  <!-- Caption -->
+  <text x="340" y="536" text-anchor="middle" dominant-baseline="central" fill="#888" font-size="13" font-family="Montserrat,sans-serif">DEDITO · mascota oficial de 4 Dedos Fritos</text>
+
+</svg>
